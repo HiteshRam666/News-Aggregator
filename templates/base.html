@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Hub</title>
+    <link rel="stylesheet", href="{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+    <header>
+        <h1>RSS News Aggregator</h1>
+        <form action="{{url_for('search')}}" method="GET">
+            <input type="text", name = "q", placeholder="Search For Keyword">
+            <input type="submit", value="Search">   
+        </form>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
